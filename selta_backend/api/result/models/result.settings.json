@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "results",
+  "info": {
+    "name": "result"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "selta": {
+      "model": "selta",
+      "via": "result"
+    },
+    "owner": {
+      "plugin": "users-permissions",
+      "model": "permission"
+    },
+    "org": {
+      "model": "org"
+    },
+    "key": {
+      "type": "uid"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seltas",
+  "info": {
+    "name": "selta",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "flow": {
+      "type": "json"
+    },
+    "result": {
+      "via": "selta",
+      "model": "result"
+    }
+  }
+}
